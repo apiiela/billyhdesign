@@ -6,10 +6,25 @@
     <title>Billy H Lighting</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
-      .fade-in.show { opacity: 1; transform: translateY(0); }
-      .hover-grow { transition: transform 0.2s ease, box-shadow 0.2s ease; }
-      .hover-grow:hover { transform: scale(1.03); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
+      /* Smooth animations */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+      .fade-in.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .hover-grow {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .hover-grow:hover {
+        transform: scale(1.03);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      }
+
       html { scroll-behavior: smooth; }
     </style>
   </head>
@@ -19,7 +34,7 @@
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <nav class="flex items-center justify-between h-16">
           <div class="flex items-center gap-4">
-            <img src="https://raw.githubusercontent.com/apiiela/billyhdesign/refs/heads/main/billyhuelogo.png" alt="Logo" class="h-10 w-auto" />
+            <img src="https://raw.githubusercontent.com/apiiela/billyhdesign/main/billyhuelogo.png" alt="Billy H Logo" class="h-10 w-auto" />
             <div>
               <h1 class="text-xl font-semibold">Billy H Lighting</h1>
               <p class="text-xs text-gray-400">Designing light that transforms stories.</p>
@@ -41,18 +56,29 @@
     </header>
 
     <main>
-      <!-- HERO -->
+      <!-- HERO SECTION -->
       <section class="relative overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://raw.githubusercontent.com/apiiela/billyhdesign/refs/heads/main/design-banner.jpg');">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://raw.githubusercontent.com/apiiela/billyhdesign/main/design-banner.jpg');">
           <div class="absolute inset-0 bg-black/60"></div>
         </div>
+
         <div class="relative max-w-7xl mx-auto px-6 lg:px-8 py-32 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div class="fade-in">
-            <h2 class="text-4xl sm:text-5xl font-extrabold leading-tight text-white">Designing light that transforms stories.</h2>
-            <p class="mt-6 max-w-xl text-gray-200">Billy H Lighting specialises in theatre, concert and event lighting — from concept and programming to full show operation.</p>
+            <h2 class="text-4xl sm:text-5xl font-extrabold leading-tight text-white">
+              Designing light that transforms stories.
+            </h2>
+
+            <p class="mt-6 max-w-xl text-gray-200">
+              Billy H Lighting specialises in theatre, concert and event lighting — from concept and programming to full show operation. Clean design, bulletproof execution.
+            </p>
+
             <div class="mt-8 flex gap-4">
               <a href="#work" class="inline-flex items-center px-5 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-500 hover-grow">View Work</a>
               <a href="#contact" class="inline-flex items-center px-5 py-3 border border-gray-400 text-white rounded-lg hover:border-blue-400 hover-grow">Contact</a>
+            </div>
+
+            <div class="mt-8 text-xs text-gray-300">
+              <strong>Based in Perth, WA.</strong> Studying at WAAPA (Western Australian Academy of Performing Arts).
             </div>
           </div>
         </div>
@@ -64,82 +90,153 @@
         <p class="mt-2 text-gray-400 max-w-2xl fade-in">Recent productions and projects.</p>
 
         <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <a href="watsons.html" class="block rounded-xl bg-gray-900 border border-gray-800 p-4 shadow-sm hover-grow fade-in">
-            <img src="https://raw.githubusercontent.com/apiiela/billyhdesign/refs/heads/main/watsons.jpg" alt="Watsons" class="h-48 w-full object-cover rounded-md" />
-            <div class="mt-4"><div class="text-sm font-bold">The Watsons</div><div class="text-xs italic">HLX</div><div class="mt-1 text-sm text-gray-200/90">The Roundhouse Theatre</div><div class="mt-2 text-sm text-gray-400">2025</div></div>
+          <!-- Watsons -->
+          <a href="watsons.html" class="rounded-xl bg-gray-900 border border-gray-800 p-4 shadow-sm hover-grow fade-in flex flex-col h-80">
+            <img src="https://raw.githubusercontent.com/apiiela/billyhdesign/main/watsons.jpg" alt="The Watsons" class="h-36 w-full object-cover rounded-md" />
+            <div class="mt-auto text-left">
+              <div class="text-sm font-bold">The Watsons</div>
+              <div class="text-xs italic">HLX</div>
+              <div class="mt-1 text-sm text-gray-200/90">The Roundhouse Theatre</div>
+              <div class="mt-2 text-sm text-gray-400">2025</div>
+            </div>
           </a>
 
-          <a href="merrily.html" class="block rounded-xl bg-gray-900 border border-gray-800 p-4 shadow-sm hover-grow fade-in">
-            <img src="https://raw.githubusercontent.com/apiiela/billyhdesign/refs/heads/main/merrilywerollalong.webp" alt="Merrily" class="h-48 w-full object-cover rounded-md" />
-            <div class="mt-4"><div class="text-sm font-bold">Merrily We Roll Along</div><div class="text-xs italic">Set Electrician</div><div class="mt-1 text-sm text-gray-200/90">The Roundhouse Theatre</div><div class="mt-2 text-sm text-gray-400">2025</div></div>
+          <!-- Merrily -->
+          <a href="mwra.html" class="rounded-xl bg-gray-900 border border-gray-800 p-4 shadow-sm hover-grow fade-in flex flex-col h-80">
+            <img src="https://raw.githubusercontent.com/apiiela/billyhdesign/main/merrilywerollalong.webp" alt="Merrily We Roll Along" class="h-36 w-full object-cover rounded-md" />
+            <div class="mt-auto text-left">
+              <div class="text-sm font-bold">Merrily We Roll Along</div>
+              <div class="text-xs italic">Set Electrician</div>
+              <div class="mt-1 text-sm text-gray-200/90">The Roundhouse Theatre</div>
+              <div class="mt-2 text-sm text-gray-400">2025</div>
+            </div>
           </a>
 
-          <div class="rounded-xl bg-gray-900 border border-gray-800 p-4 shadow-sm fade-in flex items-center justify-center h-64 text-gray-400 text-lg">Coming soon</div>
-          <div class="rounded-xl bg-gray-900 border border-gray-800 p-4 shadow-sm fade-in flex items-center justify-center h-64 text-gray-400 text-lg">Coming soon</div>
+          <!-- Wedding Singer (Coming soon centered) -->
+          <div class="rounded-xl bg-gray-900 border border-gray-800 p-4 shadow-sm fade-in flex flex-col h-80">
+            <div class="flex-1 flex items-center justify-center">
+              <span class="text-gray-500 italic">Coming soon</span>
+            </div>
+            <div class="mt-auto text-left">
+              <div class="text-sm font-bold">The Wedding Singer</div>
+              <div class="text-xs italic">Programmer</div>
+              <div class="mt-1 text-sm text-gray-200/90">The Roundhouse Theatre</div>
+              <div class="mt-2 text-sm text-gray-400">2025</div>
+            </div>
+          </div>
+
+          <!-- Metamorphoses (Coming soon centered) -->
+          <div class="rounded-xl bg-gray-900 border border-gray-800 p-4 shadow-sm fade-in flex flex-col h-80">
+            <div class="flex-1 flex items-center justify-center">
+              <span class="text-gray-500 italic">Coming soon</span>
+            </div>
+            <div class="mt-auto text-left">
+              <div class="text-sm font-bold">Metamorphoses</div>
+              <div class="text-xs italic">Lighting Designer</div>
+              <div class="mt-1 text-sm text-gray-200/90">The Edith</div>
+              <div class="mt-2 text-sm text-gray-400">2025</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+          <div class="lg:col-span-2 fade-in">
+            <h3 class="text-2xl font-bold">About Billy</h3>
+            <p class="mt-4 text-gray-300">
+              Billy H is a lighting designer and technician focused on clean, effective design and rock-solid execution. Currently completing an Advanced Diploma of Live Production and Management Services at <strong>WAAPA</strong>, Billy brings practical solutions to creative problems.
+            </p>
+
+            <ul class="mt-4 space-y-2 text-sm text-gray-400">
+              <li>• Advanced Diploma of Live Production & Management Services (in progress at WAAPA)</li>
+              <li>• Specialises in Lighting Design and Crew/Operation</li>
+              <li>• Available for tours, corporate events and theatre runs</li>
+            </ul>
+          </div>
+
+          <div class="rounded-xl overflow-hidden bg-gray-900 p-6 flex items-center justify-center hover-grow fade-in">
+            <img src="https://raw.githubusercontent.com/apiiela/billyhdesign/main/billyhuelogo.png" alt="Billy H Logo" class="w-40 h-40 object-contain" />
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" class="bg-gray-900 border-t border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+          <h3 class="text-2xl font-bold fade-in">Services</h3>
+          <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-6 rounded-lg bg-gray-950 border border-gray-800 hover-grow fade-in">
+              <h4 class="font-semibold">Lighting Design</h4>
+              <p class="mt-2 text-sm text-gray-400">Concept, light plots, cueing and show programming for theatre and events.</p>
+            </div>
+            <div class="p-6 rounded-lg bg-gray-950 border border-gray-800 hover-grow fade-in">
+              <h4 class="font-semibold">Crew & Operation</h4>
+              <p class="mt-2 text-sm text-gray-400">Experienced operators, LX crew, and show-running support for live performances.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          <div class="fade-in">
+            <h3 class="text-2xl font-bold">Get in touch</h3>
+            <p class="mt-3 text-gray-400">For quotes, availability or technical questions — send a message and Billy will reply within a few working days.</p>
+
+            <div class="mt-6 space-y-3 text-sm">
+              <div><strong>Email</strong>
+                <div class="text-gray-300">billy.hewett02@gmail.com</div>
+              </div>
+              <div><strong>Location</strong>
+                <div class="text-gray-300">Perth, Western Australia</div>
+              </div>
+            </div>
+          </div>
+
+          <form action="mailto:billy.hewett02@gmail.com" method="post" enctype="text/plain" class="bg-gray-900 rounded-lg border border-gray-800 p-6 shadow-sm fade-in hover-grow">
+            <label class="block text-sm">Name</label>
+            <input class="mt-1 block w-full rounded-md border border-gray-700 bg-gray-950 px-3 py-2 text-white" placeholder="Your name" />
+
+            <label class="block text-sm mt-4">Email</label>
+            <input class="mt-1 block w-full rounded-md border border-gray-700 bg-gray-950 px-3 py-2 text-white" placeholder="you@example.com" />
+
+            <label class="block text-sm mt-4">Message</label>
+            <textarea class="mt-1 block w-full rounded-md border border-gray-700 bg-gray-950 px-3 py-2 h-32 text-white" placeholder="Project details, dates..."></textarea>
+
+            <div class="mt-4 flex justify-between items-center">
+              <div class="text-xs text-gray-500">This will open your email client to send directly.</div>
+              <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500 hover-grow">Send</button>
+            </div>
+          </form>
         </div>
       </section>
     </main>
 
+    <footer class="border-t border-gray-800 bg-gray-900/80 backdrop-blur py-6 mt-12 fade-in">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="text-sm">© <script>document.write(new Date().getFullYear())</script> Billy H Lighting. All rights reserved.</div>
+        <div class="text-sm text-gray-400">Design inspired by theatre &amp; practical production needs.</div>
+      </div>
+    </footer>
+
     <script>
+      // Fade-in on scroll
       const faders = document.querySelectorAll('.fade-in');
       const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('show'); observer.unobserve(entry.target); } });
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+          }
+        });
       }, { threshold: 0.1 });
-      faders.forEach(fader => observer.observe(fader));
+
+      faders.forEach(fader => {
+        observer.observe(fader);
+      });
     </script>
   </body>
-</html>
-
-<!-- watsons.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Watsons - Billy H Lighting</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-950 text-gray-100 min-h-screen">
-  <div class="max-w-4xl mx-auto px-6 py-12">
-    <a href="index.html" class="text-blue-400 hover:underline">← Back</a>
-    <h1 class="text-3xl font-bold mt-4">The Watsons</h1>
-    <img src="https://raw.githubusercontent.com/apiiela/billyhdesign/refs/heads/main/watsons.jpg" alt="The Watsons" class="mt-6 rounded-lg shadow-lg" />
-    <div class="mt-6 space-y-2 text-sm">
-      <p><strong>Lighting Designer:</strong> Blair Catterall</p>
-      <p><strong class="font-bold">Head LX:</strong> Billy Hewett</p>
-      <p><strong>Programmer:</strong> Tyl Stellamens</p>
-      <p><strong>Director:</strong> Melissa Cantwell</p>
-      <p><strong>Written By:</strong> Laura Wade</p>
-      <p><strong>Designer:</strong> Mei Lim</p>
-      <p><strong>Sound Designer:</strong> Jessie Nalder</p>
-    </div>
-  </div>
-</body>
-</html>
-
-<!-- merrily.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Merrily We Roll Along - Billy H Lighting</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-950 text-gray-100 min-h-screen">
-  <div class="max-w-4xl mx-auto px-6 py-12">
-    <a href="index.html" class="text-blue-400 hover:underline">← Back</a>
-    <h1 class="text-3xl font-bold mt-4">Merrily We Roll Along</h1>
-    <img src="https://raw.githubusercontent.com/apiiela/billyhdesign/refs/heads/main/merrilywerollalong.webp" alt="Merrily We Roll Along" class="mt-6 rounded-lg shadow-lg" />
-    <div class="mt-6 space-y-2 text-sm">
-      <p><strong>Director:</strong> Tom Heath</p>
-      <p><strong>Designer:</strong> Clay Chase</p>
-      <p><strong>Lighting Designer:</strong> Blair Catterall</p>
-      <p><strong>Sound Designer:</strong> Zac Bowers</p>
-      <p><strong>Head LX:</strong> Caelan Morris</p>
-      <p><strong>Programmer:</strong> Nikita Mulcahy</p>
-      <p><strong>Set LX:</strong> Billy Hewett</p>
-    </div>
-  </div>
-</body>
 </html>
